@@ -1,0 +1,103 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CONV
+Version: T-2022.03
+Date   : Fri Sep 13 10:02:57 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: row_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: conv_value_reg[38]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CONV               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  row_reg[2]/CK (DFFRX4)                                  0.00       0.50 r
+  row_reg[2]/Q (DFFRX4)                                   0.55       1.05 f
+  U1893/Y (NAND3BX4)                                      0.23       1.29 f
+  U1605/Y (NAND2BX4)                                      0.20       1.49 f
+  U1172/Y (CLKINVX8)                                      0.09       1.58 r
+  U1318/Y (NAND2X6)                                       0.07       1.65 f
+  U1092/Y (INVX6)                                         0.10       1.75 r
+  U1173/Y (AO21X1)                                        0.24       1.99 r
+  U1221/Y (BUFX6)                                         0.19       2.18 r
+  U1065/Y (CLKINVX6)                                      0.08       2.26 f
+  U1064/Y (NAND2X4)                                       0.10       2.36 r
+  U1062/Y (NAND2X6)                                       0.08       2.44 f
+  U1144/Y (NAND4X6)                                       0.11       2.55 r
+  U1880/Y (NOR2X8)                                        0.09       2.65 f
+  U1077/Y (NAND2X4)                                       0.13       2.78 r
+  U1045/Y (INVX8)                                         0.10       2.88 f
+  U1340/Y (NAND3BX4)                                      0.25       3.12 f
+  U968/Y (INVX4)                                          0.17       3.29 r
+  U1246/Y (NAND2X4)                                       0.12       3.41 f
+  U1217/Y (NAND2X6)                                       0.12       3.53 r
+  U1053/Y (CLKINVX1)                                      0.12       3.65 f
+  U1019/Y (OAI222X4)                                      0.57       4.23 r
+  U1037/Y (AOI2BB1X1)                                     0.12       4.35 f
+  U959/Y (NAND3BX1)                                       0.29       4.64 r
+  mult_645/b[5] (CONV_DW_mult_tc_2)                       0.00       4.64 r
+  mult_645/U1407/Y (BUFX12)                               0.25       4.90 r
+  mult_645/U1233/Y (XNOR2X2)                              0.24       5.13 f
+  mult_645/U1025/Y (OR2X8)                                0.21       5.34 f
+  mult_645/U1027/Y (NAND2X6)                              0.06       5.40 r
+  mult_645/U1799/S (ADDFHX1)                              0.44       5.84 f
+  mult_645/U1074/CO (ADDFX2)                              0.49       6.33 f
+  mult_645/U1071/Y (NAND2X2)                              0.18       6.51 r
+  mult_645/U1072/Y (NAND3X4)                              0.16       6.67 f
+  mult_645/U1601/S (ADDFHX4)                              0.32       6.99 f
+  mult_645/U1857/Y (NOR2X4)                               0.21       7.20 r
+  mult_645/U2053/Y (NOR2X4)                               0.15       7.35 f
+  mult_645/U1430/Y (INVX3)                                0.12       7.47 r
+  mult_645/U1532/Y (CLKINVX1)                             0.23       7.70 f
+  mult_645/U1118/Y (NAND2X2)                              0.18       7.88 r
+  mult_645/U1116/Y (OR2X6)                                0.14       8.02 r
+  mult_645/U1117/Y (NAND2X4)                              0.06       8.08 f
+  mult_645/U1728/Y (XNOR2X4)                              0.14       8.22 r
+  mult_645/product[24] (CONV_DW_mult_tc_2)                0.00       8.22 r
+  add_0_root_add_0_root_add_645_2/B[24] (CONV_DW01_add_8)
+                                                          0.00       8.22 r
+  add_0_root_add_0_root_add_645_2/U642/Y (OR2X2)          0.27       8.50 r
+  add_0_root_add_0_root_add_645_2/U507/Y (NAND2X2)        0.18       8.68 f
+  add_0_root_add_0_root_add_645_2/U498/Y (NOR2X6)         0.14       8.82 r
+  add_0_root_add_0_root_add_645_2/U470/Y (NAND2X4)        0.14       8.96 f
+  add_0_root_add_0_root_add_645_2/U762/Y (NOR2X2)         0.15       9.12 r
+  add_0_root_add_0_root_add_645_2/U666/Y (OAI2BB1X4)      0.19       9.31 r
+  add_0_root_add_0_root_add_645_2/U504/Y (CLKINVX8)       0.15       9.46 f
+  add_0_root_add_0_root_add_645_2/U570/Y (OR2X2)          0.26       9.72 f
+  add_0_root_add_0_root_add_645_2/U560/Y (NAND2X2)        0.11       9.83 r
+  add_0_root_add_0_root_add_645_2/U571/Y (XNOR2X4)        0.13       9.96 r
+  add_0_root_add_0_root_add_645_2/SUM[38] (CONV_DW01_add_8)
+                                                          0.00       9.96 r
+  U1179/Y (OAI2BB2X4)                                     0.19      10.16 r
+  conv_value_reg[38]/D (DFFRX1)                           0.00      10.16 r
+  data arrival time                                                 10.16
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  conv_value_reg[38]/CK (DFFRX1)                          0.00      10.40 r
+  library setup time                                     -0.24      10.16
+  data required time                                                10.16
+  --------------------------------------------------------------------------
+  data required time                                                10.16
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
