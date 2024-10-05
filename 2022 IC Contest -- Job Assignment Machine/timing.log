@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: T-2022.03
+Date   : Mon Jan  8 17:01:28 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: array_cost_reg[2][0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: MatchCount_reg[3]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  array_cost_reg[2][0]/CK (DFFRX1)                        0.00       0.50 r
+  array_cost_reg[2][0]/Q (DFFRX1)                         0.86       1.36 r
+  U1121/Y (AND2X1)                                        0.32       1.67 r
+  U523/S (ADDFXL)                                         0.55       2.23 r
+  add_1_root_r829/B[1] (JAM_DW01_add_1)                   0.00       2.23 r
+  add_1_root_r829/U1_1/CO (ADDFXL)                        0.86       3.09 r
+  add_1_root_r829/U1_2/S (ADDFXL)                         0.62       3.70 r
+  add_1_root_r829/SUM[2] (JAM_DW01_add_1)                 0.00       3.70 r
+  add_0_root_r829/B[2] (JAM_DW01_add_0)                   0.00       3.70 r
+  add_0_root_r829/U1_2/CO (ADDFXL)                        0.87       4.58 r
+  add_0_root_r829/U1_3/S (ADDFX2)                         0.53       5.11 r
+  add_0_root_r829/SUM[3] (JAM_DW01_add_0)                 0.00       5.11 r
+  U588/Y (XOR2X1)                                         0.26       5.36 r
+  U832/Y (AOI32X1)                                        0.35       5.72 f
+  U580/Y (OAI21XL)                                        0.37       6.09 r
+  U829/Y (AOI32X1)                                        0.30       6.39 f
+  U828/Y (OAI2BB2XL)                                      0.48       6.87 r
+  U827/Y (AOI22X1)                                        0.21       7.08 f
+  U833/Y (OAI2BB2XL)                                      0.43       7.51 r
+  U600/Y (AO22X1)                                         0.30       7.81 r
+  U576/Y (AND2X2)                                         0.19       8.00 r
+  U599/Y (NOR3X1)                                         0.12       8.12 f
+  U577/Y (BUFX4)                                          0.32       8.45 f
+  U586/Y (NOR2X1)                                         0.39       8.84 r
+  U573/Y (OAI21X1)                                        0.29       9.13 f
+  U572/Y (AND2X2)                                         0.33       9.45 f
+  U520/Y (OA21X4)                                         0.16       9.61 f
+  U575/Y (OAI21XL)                                        0.39      10.01 r
+  MatchCount_reg[3]/D (DFFRX1)                            0.00      10.01 r
+  data arrival time                                                 10.01
+
+  clock CLK (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  MatchCount_reg[3]/CK (DFFRX1)                           0.00      10.40 r
+  library setup time                                     -0.29      10.11
+  data required time                                                10.11
+  --------------------------------------------------------------------------
+  data required time                                                10.11
+  data arrival time                                                -10.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.10
+
+
+1
